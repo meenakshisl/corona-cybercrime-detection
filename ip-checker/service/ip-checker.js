@@ -15,9 +15,11 @@ var ip = {
 
            if (!error && response.statusCode == 200) {
 
-               response = JSON.parse(body);
+               const resp = JSON.parse(body);
+	       console.log(resp.country_name);
+	       
                 
-               res.send(response);
+               res.send(resp);
 
            } else {
 
