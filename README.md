@@ -9,15 +9,25 @@ Number of calls and messages by fraudsters carrying misinformation about CoronaV
 
 <img src="https://github.com/meenakshisl/corona-cybercrime-detection/blob/master/images/microservice_arch.png" width="800" hieght="1000" />
 
-## Test cases
 
 ### IP-checker
 
-`http://35.223.144.119:82/checkip/176.31.84.249`
+Gives information about the ip address passed as parameter
+- `/about`
+     returns description of the service
+- `/checkip/:ip`
+     returns details of the ip address passed as parameter
+- Sample testcase :
+    `http://35.223.144.119:82/checkip/176.31.84.249`
 
 ### Phone-checker
+- `/about`
+    returns description of the service
+- `/checkno/:number`
+    returns the details of the number passed as parameter
+- Sample testcase:
+    `http://35.223.144.119/checkno/919532351442`
 
-`http://35.223.144.119/checkno/919532351442`
 
 ### Corona Case
 
