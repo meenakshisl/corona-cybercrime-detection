@@ -56,6 +56,17 @@ Returns the latest details about corona cases in a particular region
      
      Sample case
      `http://35.223.144.119:84/getcasefromip/137.74.203.101&Confirmed`
-     `
      
- 
+     
+     
+# Deployment
+
+The services are deployed in seperate containers managed by a Kuberenets cluster. The Dockerfile contains necessary details about setup. This 
+Git repo was cloned into the project. The docker images were put in the container registry of Google Cloud. The images for Kubernetes containers were build from this. Kuberentes Engine was used to deploy the microservices.
+
+Public URL : http://35.223.144.119
+Ports exposed : 80,(ip-checker), 82(phone-checker), 84 (Corona Cases)
+               
+               
+               
+              
