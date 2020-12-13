@@ -31,10 +31,31 @@ Gives information about the ip address passed as parameter
 
 ### Corona Case
 
-1. country
-    `http://35.223.144.119:84/getcase/country=France&status=confirmed`
-2. from phone no
-    `http://35.223.144.119:84/getcasefromno/919532351442&Confirmed`
-3. from ip address
+Returns the latest details about corona cases in a particular region
+
+- `/about`
+
+     returns the details of the microservice
+     
+- `/getcases/:country&:status`
+
+     returns the number of corona cases of `status` in country `country`
+     
+     Sample case : `http://35.223.144.119:84/getcase/country=France&status=confirmed`
+     
+- `/getcasefromno/:number&:status`
+
+     Makes a call to phone-checker microservice and get the counrty information. This result is then passed on to the api of this microservice to get the cases of the country
+     
+     Sample case :
+     `http://35.223.144.119:84/getcasefromno/919532351442&Confirmed`
+     
+- `/getcasefromip/:ip&:status`
+
+     Makes a call to ip-checker microservice and get the counrty information. This result is then passed on to the api of this microservice to get the cases of the country
+     
+     Sample case
      `http://35.223.144.119:84/getcasefromip/137.74.203.101&Confirmed`
      `
+     
+ 
