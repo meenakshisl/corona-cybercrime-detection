@@ -10,7 +10,7 @@ Number of calls and messages by fraudsters carrying misinformation about CoronaV
 <img src="https://github.com/meenakshisl/corona-cybercrime-detection/blob/master/images/microservice_arch.png" width="800" hieght="1000" />
 
 
-### IP-checker
+#### IP-checker
 
 Gives information about the ip address passed as parameter
 - `/about`
@@ -20,7 +20,7 @@ Gives information about the ip address passed as parameter
 - Sample testcase :
     `http://35.223.144.119:82/checkip/176.31.84.249`
 
-### Phone-checker
+#### Phone-checker
 - `/about`
     returns description of the service
 - `/checkno/:number`
@@ -29,7 +29,7 @@ Gives information about the ip address passed as parameter
     `http://35.223.144.119/checkno/919532351442`
 
 
-### Corona Case
+#### Corona Case
 
 Returns the latest details about corona cases in a particular region
 
@@ -59,7 +59,7 @@ Returns the latest details about corona cases in a particular region
      
      
      
-# Deployment
+## Deployment
 
 The services are deployed in seperate containers managed by a Kuberenets cluster. The Dockerfile contains necessary details about setup. This 
 Git repo was cloned into the project. The docker images were put in the container registry of Google Cloud. The images for Kubernetes containers were build from this. Kuberentes Engine was used to deploy the microservices.
