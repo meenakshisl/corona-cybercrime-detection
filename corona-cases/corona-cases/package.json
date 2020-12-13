@@ -1,0 +1,15 @@
+{
+  "name": "corona-cases",
+  "version": "1.0.1",
+  "description": "Microservice that return the corona cases in a location given coutry and status(Confirmed, Deaths or Recovered)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Meenakshi S L",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  }
+}
