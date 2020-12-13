@@ -1,39 +1,42 @@
 'use strict';
 
 var properties = require('../package.json')
-var cases = require('../service/get_cases')
-var cases_ip = require('../service/get_cases_from_ip')
-var cases_no = require('../service/get_cases_from_no')
+var cases = require('../service/getcase')
+var fromip = require('../service/getcasefromip')
+var fromno = require('../service/getcasefromno')
 
 
 var controllers = {
    about: function(req, res) {
        var aboutInfo = {
            name: properties.name,
-           version: properties.version
+           version: properties.version,
+	   description: properties.description
        }
        res.json(aboutInfo);
    },
-   get_cases: function(req, res) {
+   getcase: function(req, res) {
            cases.find(req, res, function(err, cases) {
                if (err)
                    res.send(err);
                res.json(cases);
            });
        },
-   get_cases_from_ip: function(req, res) {
-       cases_ip.find(req, res, function(err,cases_ip) {
-           if (err) 
+   getcasefromip: function(req, res) {
+       fromip.find(req, res, function(err,fromip) {
+           if (err)
               res.send(err);
-           res.json(cases_ip);
+           res.json(fromip);
        });
    },
-   get_cases_from_no: function(req, res) {
-    cases_no.find(req, res, function(err,cases_no) {
-        if (err) 
+   getcasefromno: function(req, res) {
+    fromno.find(req, res, function(err,fromno) {
+        if (err)
            res.send(err);
-        res.json(cases_no);
+        res.json(fromno);
     });
 },
-     
+
 };
+
+module.exports = controllers;
