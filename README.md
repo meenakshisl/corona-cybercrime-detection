@@ -17,4 +17,5 @@
 2. from phone no
     `http://35.223.144.119:84/getcasefromno/919532351442&Confirmed`
 3. from ip address
+     `http://35.223.144.119:84/getcasefromip/137.74.203.101&Confirmed`
      `
