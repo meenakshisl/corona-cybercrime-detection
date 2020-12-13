@@ -7,6 +7,8 @@ Number of calls and messages by fraudsters carrying misinformation about CoronaV
 
 ## Microservice Overview
 
+<img src="https://github.com/meenakshisl/corona-cybercrime-detection/blob/master/images/microservice_arch.png" width="800" hieght="1000" />
+
 ## Test cases
 
 ### IP-checker
