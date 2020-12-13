@@ -1,7 +1,7 @@
 var request = require('request');
 
 
-const ipa = 'https://apilayer.net/api/validate?access_key=08da4f6e569683448386fd76e1710dfc&number=';
+const ipa = 'https://api.ipgeolocation.io/ipgeo?apiKey=62a4aec006bb49f3874bf022b2d4ac0d&ip=';
 
 var ip = {
 
@@ -9,7 +9,7 @@ var ip = {
 	  
 
 
-       request(ipa +req.params.number,
+       request(ipa +req.params.ip,
 
        function (error, response, body) {
 
@@ -21,9 +21,12 @@ var ip = {
 
            } else {
 
+	      //response = JSON.parse(body);
+	      // console.log(response)
+
                console.log(response.statusCode + response.body);
 
-               res.send({ip: NULL});
+               res.send({ip: null});
 
            }
 
